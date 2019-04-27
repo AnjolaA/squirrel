@@ -10,7 +10,7 @@ containers:
                 commands:
                     - npm install
                     - find ./node_modules -mtime +10950 -exec touch {} \;
-                    - pip install --upgrade awscli
+                    # - pip install --upgrade awscli
             pre_build:
                 commands:
                 # Discover and run unit tests in the 'tests' directory
