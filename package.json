@@ -9,8 +9,5 @@
   "scripts": {
     "test": "./node_modules/.bin/jest"
   },
-  "author": "anjola@anjola.dev",
-  "devDependencies": {
-    "jest": "^24.7.1"
-  }
+  "author": "anjola@anjola.dev"
 }
