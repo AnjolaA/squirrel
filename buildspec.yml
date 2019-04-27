@@ -6,10 +6,19 @@ environment_variables:
 containers:
     LambdaFunctions:
         phases:
-            during_build:
+            install:
                 commands:
                     - npm install
-                    - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
+                    - find ./node_modules -mtime +10950 -exec touch {} \;
+                    - pip install --upgrade awscli
+            pre_build:
+                commands:
+                # Discover and run unit tests in the 'tests' directory
+                - npm test
+            build:
+                commands:
+                # Discover and run unit tests in the 'tests' directory
+                - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
         artifacts:
             files:
                 - post-saml.yaml
