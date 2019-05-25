@@ -7,10 +7,12 @@
   "description": "Sam Farm lambda function for Re:Invent 2016 Serverless miniconf",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest tests/unit/",
+    "apitest": "./node_modules/.bin/jest tests/api/"
   },
   "author": "anjola@anjola.dev",
   "devDependencies": {
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "superagent": "^5.0.5"
   }
 }
