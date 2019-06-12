@@ -23,3 +23,4 @@ containers:
             files:
                 - post-saml.yaml
                 - beta.json
+            name: myname-$(date +%Y-%m-%d)
