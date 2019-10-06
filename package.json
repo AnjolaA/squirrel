@@ -12,7 +12,7 @@
   },
   "author": "anjola@anjola.dev",
   "devDependencies": {
-    "jest": "^24.7.1",
+    "jest": "^24.9.0",
     "superagent": "^5.0.5"
   }
 }
